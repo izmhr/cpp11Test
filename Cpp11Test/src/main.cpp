@@ -63,6 +63,7 @@ void main() {
 
 
 	// Lambda
+	// http://kaworu.jpn.org/cpp/%E3%83%A9%E3%83%A0%E3%83%80%E5%BC%8F
 	vector<int> v;
 	v.push_back(3);
 	v.push_back(5);
@@ -70,4 +71,21 @@ void main() {
 	v.push_back(-4);
 	abssort(v.begin(), 4);
 
+	[](){cout << "hoge" << endl; }();
+	auto lambdaFunc = [](){cout << "hello world" << endl; };
+	lambdaFunc();
+
+	[](const string& str){
+		cout << str << endl;
+	}("called from lambda function");
+
+	// lambda with returns
+	auto lambdaFuncA = []{return 0; }();
+	auto lambdaFuncB = []()->int{return 0; }();
+	cout << lambdaFuncA << endl;
+	cout << lambdaFuncB << endl;
+
+	lambdaFuncC();
+	lambdaFuncD();	// mutable
+	lambdaAndStdFunc();
 }
