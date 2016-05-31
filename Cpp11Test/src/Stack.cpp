@@ -1,11 +1,11 @@
 #include "Stack.h"
 
-void anFunction()
+void anFunction(Ret ret)
 {
-	cout << "an Function dayo" << endl;
+	cout << ret.a << " ," << ret.b << endl;
 }
 
-function<void()> returnfunc()
+function<void(Ret)> returnfunc()
 {
 	return anFunction;
 }

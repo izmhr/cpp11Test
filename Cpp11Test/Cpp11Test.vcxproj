@@ -67,11 +67,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Lambda.h" />
+    <ClInclude Include="include\SingletonClass.h" />
     <ClInclude Include="include\Stack.h" />
+    <ClInclude Include="include\VirtualMethod.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Lambda.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SingletonClass.cpp" />
     <ClCompile Include="src\Stack.cpp" />
+    <ClCompile Include="src\VirtualMethod.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

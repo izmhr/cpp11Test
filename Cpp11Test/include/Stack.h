@@ -31,9 +31,16 @@ public:
 // std::function
 // http://torini.hateblo.jp/entry/2015/03/22/%E9%96%A2%E6%95%B0%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%88%E3%82%8A%E3%82%82std%3A%3Afunction%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86
 // typedef
-typedef function<void()> VoidVoidFunc;
+struct Ret {
+	Ret(int a_, int b_)
+	: a(a_)
+	, b(b_){};
+	int a;
+	int b;
+};
+typedef function<void(Ret)> VoidVoidFunc;
 
-void anFunction();
+void anFunction(Ret ret);
 VoidVoidFunc returnfunc();
 
 
